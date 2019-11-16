@@ -1,0 +1,26 @@
+<h1>Cadastro de Solicitantes</h1>
+<p>
+<a href="<?=$this->url('solicitante.novo')?>">Incluir solicitante</a>
+</p>	
+<table>
+<thead>
+<tr>
+<th>CPF</th>	
+<th>Nome</th>
+<th>Exclusão</th>
+</tr>
+</thead>
+<tbody>
+<?php
+foreach($this->solicitantes as $solicitante):
+?>
+<tr>
+<td><a href="<?=$this->url('solicitante.editar',['cpf' =>$solicitante['cpf']])?>"><?=$solicitante['cpf']?></td>
+<td><?=$solicitante['nome']?></td>
+<td><a href="<?=$this->url('solicitante.excluir',['cpf' =>$solicitante['cpf']])?>">X</td>
+</tr>
+<?php
+endforeach;
+?>	
+</tbody>	
+</table>

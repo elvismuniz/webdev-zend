@@ -1,0 +1,13 @@
+<form action="<?=$this->url('solicitante.gravar')?>" method="post">
+	CPF <input type="text" name="cpf" id="cpf" 
+		<?= isset($this->solicitante['cpf']) ? 'readonly="readonly"' : '' ?>
+		value="<?= $this->solicitante['cpf'] ?? '' ?>"><br/>
+    Nome <input type="text" name="nome" id="nome" value="<?= $this->solicitante['nome'] ?? '' ?>"><br/>
+    CEP <input type="text" name="cep" id="cep" value="<?= $this->solicitante['cep'] ?? '' ?>"><br/>
+    Município <input type="text" name="municipio" id="municipio" value="<?= $this->solicitante['municipio'] ?? '' ?>"><br/>
+    UF <input type="text" name="uf" id="uf" value="<?= $this->solicitante['uf'] ?? '' ?>"><br/>
+    E-mail <input type="text" name="email" id="email" value="<?= $this->solicitante['email'] ?? '' ?>"><br/>
+    DDD <input type="text" name="ddd" id="ddd" value="<?= $this->solicitante['ddd'] ?? '' ?>"><br/>
+    Telefone <input type="text" name="telefone" id="telefone" value="<?= $this->solicitante['telefone'] ?? '' ?>"><br/>
+	<input type="submit" value="gravar">
+</form>	
